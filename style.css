@@ -1,4 +1,4 @@
-/* Базові налаштування та змінні */
+
 :root {
     --primary-color: #d4a373;
     --secondary-color: #fefae0;
@@ -20,7 +20,7 @@ body {
     background-color: var(--bg-color);
 }
 
-/* Шапка сайту та Навігація */
+
 header {
     background-color: var(--secondary-color);
     padding: 1rem 5%;
@@ -58,7 +58,7 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* Головний банер (Hero) */
+
 #hero {
     height: 70vh;
     background: linear-gradient(rgba(254, 250, 224, 0.85), rgba(233, 237, 201, 0.85)), 
@@ -100,7 +100,7 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
-/* Загальні стилі секцій */
+
 section {
     padding: 4rem 5%;
 }
@@ -114,7 +114,7 @@ section h2 {
     letter-spacing: 1px;
 }
 
-/* Секція "Про нас" */
+
 #about p {
     max-width: 800px;
     margin: 0 auto;
@@ -122,11 +122,18 @@ section h2 {
     font-size: 1.1rem;
 }
 
-/* Каталог (CSS Grid) */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .card {
@@ -137,6 +144,9 @@ section h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     padding-bottom: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
@@ -152,7 +162,6 @@ section h2 {
     background-size: cover;
 }
 
-/* Заглушки для фотографій з Unsplash */
 #img-wreaths { background-image: url('https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=600&q=80'); }
 #img-bows { background-image: url('https://images.unsplash.com/photo-1607344645866-009c320b63e0?auto=format&fit=crop&w=600&q=80'); }
 #img-custom { background-image: url('https://images.unsplash.com/photo-1550614000-4b95d4ed7942?auto=format&fit=crop&w=600&q=80'); }
@@ -160,15 +169,100 @@ section h2 {
 .card h3 {
     margin-bottom: 0.8rem;
     color: var(--text-color);
+    padding: 0 1rem;
 }
 
 .card p {
     padding: 0 1.5rem;
     color: #555;
     font-size: 0.95rem;
+    flex-grow: 1;
 }
 
-/* Форма контактів */
+.more-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+
+.catalog-page {
+    padding: 3rem 10%;
+}
+
+.catalog-page h1 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.page-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #bc8a5f;
+}
+
+.catalog-page h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    color: var(--primary-color);
+}
+
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0 3rem 0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.info-table th, .info-table td {
+    padding: 14px 18px;
+    border: 1px solid #eeeeee;
+    text-align: left;
+}
+
+.info-table th {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.info-table tr:nth-child(even) {
+    background-color: #f9fbf7;
+}
+
+
+.process-list, .materials-list {
+    margin: 1.5rem 0 2rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+.process-list li, .materials-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 0.5rem;
+}
+
+
 #contact form {
     max-width: 600px;
     margin: 0 auto;
@@ -211,7 +305,7 @@ section h2 {
     margin-top: 1rem;
 }
 
-/* Підвал сайту (Footer) */
+
 footer {
     background-color: var(--text-color);
     color: #fff;
@@ -220,7 +314,7 @@ footer {
     margin-top: 3rem;
 }
 
-/* Адаптивність (Media Queries) */
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -231,7 +325,12 @@ footer {
         font-size: 2.2rem;
     }
     
-    section {
-        padding: 3rem 5%;
+    section, .catalog-page {
+        padding: 2rem 5%;
+    }
+    
+    .info-table {
+        display: block;
+        overflow-x: auto;
     }
 }
