@@ -1,4 +1,4 @@
-
+/* Базові налаштування та змінні */
 :root {
     --primary-color: #d4a373;
     --secondary-color: #fefae0;
@@ -20,7 +20,7 @@ body {
     background-color: var(--bg-color);
 }
 
-
+/* Шапка сайту та Навігація */
 header {
     background-color: var(--secondary-color);
     padding: 1rem 5%;
@@ -58,7 +58,7 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-
+/* Головний банер (Hero) */
 #hero {
     height: 70vh;
     background: linear-gradient(rgba(254, 250, 224, 0.85), rgba(233, 237, 201, 0.85)), 
@@ -100,7 +100,7 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
-
+/* Загальні стилі секцій */
 section {
     padding: 4rem 5%;
 }
@@ -114,7 +114,7 @@ section h2 {
     letter-spacing: 1px;
 }
 
-
+/* Секція "Про нас" */
 #about p {
     max-width: 800px;
     margin: 0 auto;
@@ -122,7 +122,7 @@ section h2 {
     font-size: 1.1rem;
 }
 
-
+/* Каталог (CSS Grid) */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -187,7 +187,7 @@ section h2 {
     font-size: 0.95rem;
 }
 
-
+/* Стилі для внутрішніх сторінок каталогів */
 .catalog-page {
     padding: 3rem 10%;
 }
@@ -224,7 +224,7 @@ section h2 {
     color: var(--primary-color);
 }
 
-
+/* Стилізація HTML таблиць */
 .info-table {
     width: 100%;
     border-collapse: collapse;
@@ -251,7 +251,7 @@ section h2 {
     background-color: #f9fbf7;
 }
 
-
+/* Стилізація списків */
 .process-list, .materials-list {
     margin: 1.5rem 0 2rem 1.5rem;
     font-size: 1.1rem;
@@ -262,7 +262,7 @@ section h2 {
     padding-left: 0.5rem;
 }
 
-
+/* Форма контактів */
 #contact form {
     max-width: 600px;
     margin: 0 auto;
@@ -305,7 +305,7 @@ section h2 {
     margin-top: 1rem;
 }
 
-
+/* Підвал сайту (Footer) */
 footer {
     background-color: var(--text-color);
     color: #fff;
@@ -314,7 +314,7 @@ footer {
     margin-top: 3rem;
 }
 
-
+/* Адаптивність (Media Queries) */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
